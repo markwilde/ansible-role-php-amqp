@@ -1,0 +1,3 @@
+---
+pecl_package: amqp
+php_amqp_ini_filename: amqp

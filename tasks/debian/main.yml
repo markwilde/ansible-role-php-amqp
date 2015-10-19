@@ -1,0 +1,10 @@
+---
+- name: debian | install amqp module for php
+  command: pecl install {{pecl_package}}
+  args:
+    creates: "{{ansible_local.phpinfo_core.php_extension_dir}}/{{php_amqp_extension}}"
+
+- name: debian | enable amqp module for php
+  command: php5enmod {{php_amqp_ini_filename}}
+  args:
+    creates: "{{ansible_local.phpinfo_core.php_config_file_scan_dir}}/{{php_amqp_extension_priority}}-{{php_amqp_ini_filename}}.ini"

@@ -1,0 +1,21 @@
+---
+galaxy_info:
+  author: Mark Wilde
+  description: An Ansible role for installing AMQP module for PHP.
+  license: MIT
+  min_ansible_version: 1.9
+  platforms:
+    - name: EL
+      versions:
+        - 6
+    - name: Ubuntu
+      versions:
+        - trusty
+  categories:
+    - web
+dependencies:
+  - { role: "markwilde.gcc" }
+  - { role: "markwilde.php" }
+  - { role: "markwilde.php-devel" }
+  - { role: "markwilde.librabbitmq-devel" }
+  - { role: "markwilde.php-pear" }
